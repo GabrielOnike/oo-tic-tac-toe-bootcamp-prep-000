@@ -82,7 +82,7 @@ def over?
 end
 
 def winner
- if win_row = won?(@board)
+ if win_row = won?
   @board[win_row[0]]
 end
 end
