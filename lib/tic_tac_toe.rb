@@ -3,7 +3,7 @@ class TicTacToe
    @board = board || Array.new(9, " ")
  end
 
-def display_board(board)
+def display_board
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
@@ -24,7 +24,7 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def turn(board)
+def turn
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
@@ -36,11 +36,11 @@ def turn(board)
   end
 end
 
-def turn_count(board)
+def turn_count
       board.count("O") + board.count("X")
 end
 
-def current_player(board)
+def current_player
  turn_count(board).odd? ? "O" : "X"
 end
 
@@ -69,25 +69,25 @@ def won?(board)
 end
 end
 
-def full?(board)
+def full?
    board.all? {|board| board== "X"|| board== "O"}
   end
 
-def draw?(board)
+def draw?
    full?(board) && !won?(board)
 end
 
-def over?(board)
+def over?
    won?(board) || full?(board)
 end
 
-def winner(board)
+def winner
  if win_row = won?(board)
   board[win_row[0]]
 end
 end
 
-def play(board)
+def play
     until over?(board) || draw?(board)
        turn(board)
     end
