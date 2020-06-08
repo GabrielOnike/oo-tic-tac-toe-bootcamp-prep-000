@@ -41,7 +41,7 @@ def turn_count
 end
 
 def current_player
- turn_count(@board).odd? ? "O" : "X"
+ turn_count.odd? ? "O" : "X"
 end
 
 def position_taken?( index)  #Helper Method
