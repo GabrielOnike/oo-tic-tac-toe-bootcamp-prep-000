@@ -74,26 +74,26 @@ def full?
   end
 
 def draw?
-   full?(board) && !won?(board)
+   full?(@board) && !won?(@board)
 end
 
 def over?
-   won?(board) || full?(board)
+   won?(@board) || full?(@board)
 end
 
 def winner
- if win_row = won?(board)
-  board[win_row[0]]
+ if win_row = won?(@board)
+  @board[win_row[0]]
 end
 end
 
 def play
-    until over?(board) || draw?(board)
-       turn(board)
+    until over?(@board) || draw?(@board)
+       turn(@board)
     end
-      if won?(board)
+      if won?(@board)
         puts "Congratulations #{winner(board)}!"
-      elsif draw?(board)
+      elsif draw?(@board)
         puts "Cat's Game!"
       end
     end
