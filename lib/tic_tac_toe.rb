@@ -65,7 +65,7 @@ def won?
   # grab each index from the win_combination that composes a win.
   @board[win_combination[0]] == @board[win_combination[1]] &&
   @board[win_combination[1]] == @board[win_combination[2]] &&
-  position_taken?(@board, win_combination[0])
+  position_taken?(win_combination[0])
 end
 end
 
