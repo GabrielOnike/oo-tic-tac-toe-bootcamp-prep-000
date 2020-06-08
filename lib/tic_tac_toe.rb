@@ -59,13 +59,13 @@ WIN_COMBINATIONS = [
   [2,4,6]  # diagonal two
 ]
 
-def won?(board)
+def won?
   WIN_COMBINATIONS.find do |win_combination|
   # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
   # grab each index from the win_combination that composes a win.
-  board[win_combination[0]] == board[win_combination[1]] &&
-  board[win_combination[1]] == board[win_combination[2]] &&
-  position_taken?(board, win_combination[0])
+  @board[win_combination[0]] == @board[win_combination[1]] &&
+  @board[win_combination[1]] == @board[win_combination[2]] &&
+  position_taken?(@board, win_combination[0])
 end
 end
 
