@@ -78,7 +78,7 @@ def draw?
 end
 
 def over?
-   won?(@board) || full?(@board)
+   won? || full?
 end
 
 def winner
