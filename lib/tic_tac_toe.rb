@@ -70,7 +70,7 @@ end
 end
 
 def full?
-   @board.all? {|board| @board== "X"|| @board== "O"}
+   @board.all? {@board== "X"|| @board== "O"}
   end
 
 def draw?
