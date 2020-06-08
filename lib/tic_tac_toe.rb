@@ -37,7 +37,7 @@ def turn
 end
 
 def turn_count
-      board.count("O") + board.count("X")
+      @board.count("O") + @board.count("X")
 end
 
 def current_player
