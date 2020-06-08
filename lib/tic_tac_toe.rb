@@ -44,8 +44,8 @@ def current_player
  turn_count(@board).odd? ? "O" : "X"
 end
 
-def position_taken?(board, index)  #Helper Method
-  !(board[index].nil? || board[index] == " ")
+def position_taken?( index)  #Helper Method
+  !(@board[index].nil? || @board[index] == " ")
 end
 
 WIN_COMBINATIONS = [
